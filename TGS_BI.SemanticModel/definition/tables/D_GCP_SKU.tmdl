@@ -1,0 +1,369 @@
+table D_GCP_SKU
+	lineageTag: c301852e-9813-46b2-90a1-02383469d510
+	sourceLineageTag: eb39bc62-8bd3-4156-84f1-91747d7f96de
+
+	column sku_description
+		dataType: string
+		lineageTag: 1a0d2749-b667-4b89-8bbe-7158a4ff1365
+		sourceLineageTag: f9d9dba2-c575-4029-b229-7aa16bee6897
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: sku_description
+
+		annotation SummarizationSetBy = User
+
+	column idd_gcp_sku
+		dataType: string
+		isHidden
+		isNullable: false
+		lineageTag: 621f8226-5c24-4353-a3e8-d664cb1651c5
+		sourceLineageTag: ddc0248b-387f-4084-9cf6-8186dd6008fa
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_sku
+
+		annotation SummarizationSetBy = User
+
+	column service_description
+		dataType: string
+		lineageTag: 7b3576af-c022-4156-941e-f0ac6cbf2643
+		sourceLineageTag: 3f19525c-9742-4e9b-bb8c-2d000ef9f89b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: service_description
+
+		annotation SummarizationSetBy = User
+
+	column service_category_description
+		dataType: string
+		lineageTag: 38885f03-d8f1-4fb2-8034-bf5d29631032
+		sourceLineageTag: f9f3b778-fc9a-4e8e-ab2b-7cda7facc99b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: service_category_description
+
+		annotation SummarizationSetBy = User
+
+	column account
+		dataType: string
+		lineageTag: cbce70bb-7c37-46c9-8604-a01501c868f5
+		sourceLineageTag: 980607a4-6245-4c3f-99e1-53db91dcf624
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: account
+
+		annotation SummarizationSetBy = User
+
+	column prod_tax_lv1
+		dataType: string
+		lineageTag: a07c37a0-80b1-4f6b-9c88-7715b2b53832
+		sourceLineageTag: 950f7f0d-bd66-4a49-9025-235d383a251b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: prod_tax_lv1
+
+		annotation SummarizationSetBy = User
+
+	column prod_tax_lv2
+		dataType: string
+		lineageTag: 6ff59385-8674-406a-b208-d524c0b109f4
+		sourceLineageTag: b54c90f6-2611-4a72-a153-1739419b3880
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: prod_tax_lv2
+
+		annotation SummarizationSetBy = User
+
+	column prod_tax_lv3
+		dataType: string
+		lineageTag: 4a458c2e-7014-42ef-a51c-bcc0bf72aa9e
+		sourceLineageTag: 0fce0246-1ed6-4cbd-897a-1e58e99ae4aa
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: prod_tax_lv3
+
+		annotation SummarizationSetBy = User
+
+	column prod_tax_lv4
+		dataType: string
+		lineageTag: 172024e0-cf8e-4341-a2f1-492b4ae512bf
+		sourceLineageTag: 624c9a7b-f721-473f-b999-6bee6e4de335
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: prod_tax_lv4
+
+		annotation SummarizationSetBy = User
+
+	column prod_tax_lv5
+		dataType: string
+		lineageTag: 1e7c5452-185b-40db-bdd0-2588c66f22e6
+		sourceLineageTag: d69ce024-de05-4390-93a6-9a08441d4dc7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: prod_tax_lv5
+
+		annotation SummarizationSetBy = User
+
+	column prod_tax_lv6
+		dataType: string
+		lineageTag: c65c5918-a62d-44fe-92e8-6051c6784d93
+		sourceLineageTag: 7589bb00-6eaf-4eca-b270-7e632ea00695
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: prod_tax_lv6
+
+		annotation SummarizationSetBy = User
+
+	column prod_tax_lv7
+		dataType: string
+		lineageTag: 6b149988-8c70-4b43-9798-dfa863e81ff5
+		sourceLineageTag: 1054000e-759d-482f-a88a-8546d3f51ded
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: prod_tax_lv7
+
+		annotation SummarizationSetBy = User
+
+	column prod_tax_string
+		dataType: string
+		lineageTag: 20ea7159-e72a-4c67-bc6d-0dfb058852b7
+		sourceLineageTag: 68c597f6-7b1b-4899-8e92-02503e93d74e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: prod_tax_string
+
+		annotation SummarizationSetBy = User
+
+	column prod_tax_lv8
+		dataType: string
+		lineageTag: de30e80b-8034-40a4-b95c-4640ab790507
+		sourceLineageTag: afec0648-3db0-4e53-8fe4-fe550c605925
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: prod_tax_lv8
+
+		annotation SummarizationSetBy = User
+
+	column sku_price_variation_percent_bucket
+		dataType: string
+		lineageTag: 6a491ce5-353e-4fa1-9499-d08fb74f7da6
+		sourceLineageTag: f4cf4478-a87e-47c2-a5be-e9b213942c45
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: sku_price_variation_percent_bucket
+
+		annotation SummarizationSetBy = User
+
+	column pricing_unit_description
+		dataType: string
+		lineageTag: 554056be-8c0c-4f61-8499-f31d0c14ae4a
+		sourceLineageTag: bd2f1d28-facc-461d-a180-48f92ba7beea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: pricing_unit_description
+
+		annotation SummarizationSetBy = User
+
+	column tgs_sku_category
+		dataType: string
+		lineageTag: 0655c668-04b2-4085-9c3c-ed969a073df1
+		sourceLineageTag: 2459ee4e-bd78-492c-a324-f4e3525b83f8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: tgs_sku_category
+
+		annotation SummarizationSetBy = User
+
+	column sku_id
+		dataType: string
+		lineageTag: 88ff584a-15d6-40f1-8612-fb10f69a5a8d
+		sourceLineageTag: de0f9d2c-ea65-4ff6-8ee9-08c90feebf13
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: sku_id
+
+		annotation SummarizationSetBy = User
+
+	column rates_discount_percent
+		dataType: double
+		lineageTag: 8b1145d8-4599-4fb2-9bcb-4ee6916e4fbd
+		sourceLineageTag: 915b0298-c4b0-4166-bc8d-ba312b6dac7d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: rates_discount_percent
+
+		annotation SummarizationSetBy = User
+
+	column rates_pricing_unit_quantity
+		dataType: string
+		lineageTag: a750ab22-c298-4be3-9704-36070cae941e
+		sourceLineageTag: 0d327fdf-82a8-41bb-80c4-d3409a6bc49b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: rates_pricing_unit_quantity
+
+		annotation SummarizationSetBy = User
+
+	column rates_start_usage_amount
+		dataType: string
+		lineageTag: 510ef833-1a74-422c-9fec-4c5bbfbd3262
+		sourceLineageTag: 111569ea-5faf-44bd-8c9f-681ebd91090e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: rates_start_usage_amount
+
+		annotation SummarizationSetBy = User
+
+	column rates_usd_amount
+		dataType: string
+		lineageTag: 0761ebc0-171c-4ca5-870d-740659be677a
+		sourceLineageTag: 859fa5ec-ed0e-42b4-a42b-8b2633f9fa85
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: rates_usd_amount
+
+		annotation SummarizationSetBy = User
+
+	column 'SKU Category' = ```
+			
+			VAR SkuLower = LOWER ( 'D_GCP_SKU'[sku_description] ) // Convert to lowercase for easier matching. Use your actual table name, e.g., 'other' or your main cost table.
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        // 1. Egress (Data out) - High priority
+			        CONTAINSSTRING ( SkuLower, "egress" )
+			            || CONTAINSSTRING ( SkuLower, "data transfer out" )
+			            || CONTAINSSTRING ( SkuLower, "download" ), "Egress",
+			        // 2. Ingress (Data in) - High priority
+			        CONTAINSSTRING ( SkuLower, "ingress" )
+			            || CONTAINSSTRING ( SkuLower, "data transfer in" )
+			            || CONTAINSSTRING ( SkuLower, "upload" )
+			            || CONTAINSSTRING ( SkuLower, "cache fill" )
+			            || CONTAINSSTRING ( SkuLower, "cache ingest" ), "Ingress",
+			        // 3. AI / ML
+			        CONTAINSSTRING ( SkuLower, "gemini" )
+			            || CONTAINSSTRING ( SkuLower, "palm" ) 
+			            || CONTAINSSTRING ( SkuLower, "imagen" )
+			            || CONTAINSSTRING ( SkuLower, "vertex ai" )
+			            || CONTAINSSTRING ( SkuLower, "automl" )
+			            || CONTAINSSTRING ( SkuLower, "ai pipeline" )
+			            || CONTAINSSTRING ( SkuLower, "predictions" )
+			            || CONTAINSSTRING ( SkuLower, "training" ) // Be careful, can overlap with compute for pure training jobs
+			            || CONTAINSSTRING ( SkuLower, "llm" )
+			            || CONTAINSSTRING ( SkuLower, "codey" )
+			            || CONTAINSSTRING ( SkuLower, "claude" ), "AI/ML",
+			        // 4. Compute (CPU, RAM, GPU, Serverless)
+			        CONTAINSSTRING ( SkuLower, "instance core" )
+			            || CONTAINSSTRING ( SkuLower, "instance ram" )
+			            || CONTAINSSTRING ( SkuLower, "vcpu" )
+			            || CONTAINSSTRING ( SkuLower, "mcpu" )
+			            || CONTAINSSTRING ( SkuLower, " cpu" ) 
+			            || CONTAINSSTRING ( SkuLower, " ram" ) 
+			            || CONTAINSSTRING ( SkuLower, "gpu" )
+			            || CONTAINSSTRING ( SkuLower, "accelerator" )
+			            || CONTAINSSTRING ( SkuLower, "autopilot pod" )
+			            || CONTAINSSTRING ( SkuLower, "cloud run" ) 
+			            || CONTAINSSTRING ( SkuLower, "services memory" ) // For Cloud Run services
+			            || CONTAINSSTRING ( SkuLower, "services cpu" )    // For Cloud Run services
+			            || CONTAINSSTRING ( SkuLower, "cloud function" )
+			            || CONTAINSSTRING ( SkuLower, "build time" )      // For Cloud Build
+			            || CONTAINSSTRING ( SkuLower, "jobs" ) 
+			            || CONTAINSSTRING ( SkuLower, "gke enterprise" )
+			            || CONTAINSSTRING ( SkuLower, "kubernetes cluster" ), "Compute",
+			        // 5. Storage (Disks, Buckets, Backup)
+			        CONTAINSSTRING ( SkuLower, "storage" ) 
+			            && NOT (CONTAINSSTRING (SkuLower, "api" ) ) 
+			            && NOT (CONTAINSSTRING (SkuLower, "message backlog" ) ) // Avoid Pub/Sub backlog
+			            || CONTAINSSTRING ( SkuLower, "pd capacity" )
+			            || CONTAINSSTRING ( SkuLower, "hyperdisk" ) // For Hyperdisk
+			            || CONTAINSSTRING ( SkuLower, "persistent disk" )
+			            || CONTAINSSTRING ( SkuLower, "ssd" )
+			            || CONTAINSSTRING ( SkuLower, "hdd" )
+			            || CONTAINSSTRING ( SkuLower, "archive" )
+			            || CONTAINSSTRING ( SkuLower, "coldline" )
+			            || CONTAINSSTRING ( SkuLower, "nearline" )
+			            || CONTAINSSTRING ( SkuLower, "backup" )
+			            || CONTAINSSTRING ( SkuLower, "filestore" )
+			            || CONTAINSSTRING ( SkuLower, "snapshot" ), "Storage",
+			        // 6. Database Services
+			        CONTAINSSTRING ( SkuLower, "cloud sql" )
+			            || CONTAINSSTRING ( SkuLower, "alloydb" )
+			            || ( CONTAINSSTRING ( SkuLower, "bigquery" ) 
+			                 && NOT (CONTAINSSTRING (SkuLower, "api" ) ) 
+			                 && NOT (CONTAINSSTRING (SkuLower, "storage" ) )
+			               )
+			            || CONTAINSSTRING ( SkuLower, "firestore" )
+			            || CONTAINSSTRING ( SkuLower, "memorystore" )
+			            || CONTAINSSTRING ( SkuLower, "spanner" ), "Database",
+			        // 7. Data Analytics & Processing
+			        CONTAINSSTRING ( SkuLower, "dataflow" )
+			            || CONTAINSSTRING ( SkuLower, "dataproc" )
+			            || CONTAINSSTRING ( SkuLower, "data fusion" )
+			            || CONTAINSSTRING ( SkuLower, "dataplex" )
+			            || CONTAINSSTRING ( SkuLower, "pub/sub" )
+			            || CONTAINSSTRING ( SkuLower, "message delivery" ) // For Pub/Sub etc.
+			            || CONTAINSSTRING ( SkuLower, "message backlog" )  // For Pub/Sub etc.
+			            || CONTAINSSTRING ( SkuLower, "analysis" ), "Data Analytics/Processing",
+			        // 8. Networking (Other than Egress/Ingress to/from Internet)
+			        CONTAINSSTRING ( SkuLower, "load balanc" ) 
+			            || CONTAINSSTRING ( SkuLower, " vpn" )
+			            || CONTAINSSTRING ( SkuLower, "interconnect" )
+			            || CONTAINSSTRING ( SkuLower, "cdn" ) && NOT(CONTAINSSTRING ( SkuLower, "cache fill" )) // CDN service itself, not cache fill
+			            || CONTAINSSTRING ( SkuLower, "nat gateway" )
+			            || CONTAINSSTRING ( SkuLower, "api gateway" ) 
+			            || CONTAINSSTRING ( SkuLower, "static ip" )        // For Static IP
+			            || CONTAINSSTRING ( SkuLower, "data delivery" )    // For intra/inter-region
+			            || CONTAINSSTRING ( SkuLower, "inter-region data" )// For inter-region
+			            || CONTAINSSTRING ( SkuLower, "intra-region data" )// For intra-region
+			            || CONTAINSSTRING ( SkuLower, "network" ) 
+			               && NOT(CONTAINSSTRING(SkuLower, "egress")) 
+			               && NOT(CONTAINSSTRING(SkuLower, "ingress"))
+			               && NOT(CONTAINSSTRING(SkuLower, "data transfer out"))
+			               && NOT(CONTAINSSTRING(SkuLower, "data transfer in")), "Network - Other",
+			        // 9. Security
+			        CONTAINSSTRING ( SkuLower, "hsm" )
+			            || CONTAINSSTRING ( SkuLower, "cloud armor" )
+			            || CONTAINSSTRING ( SkuLower, "cloud ids" )
+			            || CONTAINSSTRING ( SkuLower, "firewall insights" )
+			            || CONTAINSSTRING ( SkuLower, "certificates usage" ) // For Regional Certificates
+			            || CONTAINSSTRING ( SkuLower, "secret" ), "Security",
+			        // 10. Licensing
+			        CONTAINSSTRING ( SkuLower, "licensing fee" ), "Licensing",
+			        // 11. Management, Operations, Fees & Support
+			        CONTAINSSTRING ( SkuLower, "operations" ) // GCS operations etc.
+			            || CONTAINSSTRING ( SkuLower, "api usage" )
+			            || CONTAINSSTRING ( SkuLower, "monitoring" )
+			            || CONTAINSSTRING ( SkuLower, "synthetic monitor" ) // For Synthetic Monitoring
+			            || CONTAINSSTRING ( SkuLower, "prometheus" )        // For Prometheus
+			            || CONTAINSSTRING ( SkuLower, "metric volume" )     // For Metric Volume
+			            || CONTAINSSTRING ( SkuLower, "log " ) 
+			            || SkuLower = "tax"                               // For Tax
+			            || CONTAINSSTRING ( SkuLower, " fee" )
+			            || CONTAINSSTRING ( SkuLower, "support" )
+			            || CONTAINSSTRING ( SkuLower, "billing adjustment" )
+			            || CONTAINSSTRING ( SkuLower, "management" ) 
+			            || CONTAINSSTRING ( SkuLower, "control plane" )
+			            || SkuLower = "requests", // Generic, place carefully
+			             "Management & Operations",
+			        // 12. Placeholder for more specific product groups if needed
+			        CONTAINSSTRING( SkuLower, "cloud composer"), "Orchestration - Cloud Composer",
+			        CONTAINSSTRING( SkuLower, "artifact registry"), "DevOps - Artifact Registry",
+			        // Default category
+			        "Other Services"
+			    )
+			```
+		lineageTag: f0202259-b052-4d19-be07-fbe8bcb3c037
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition D_GCP_SKU = entity
+		mode: directQuery
+		source
+			entityName: D_GCP_SKU
+			expressionSource: 'DirectQuery til AS – GCP Usage & Billing data model'
+
+	annotation PBI_ResultType = Exception
+

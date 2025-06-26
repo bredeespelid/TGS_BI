@@ -1,0 +1,204 @@
+table F_GCP_COST__DIRECT_QUERY
+	lineageTag: 1d338aa6-1036-43f1-a28c-2530f3b84699
+	sourceLineageTag: a1a36a07-fa2d-4c42-9436-708a3b1803e6
+
+	column idd_gcp_project
+		dataType: string
+		isHidden
+		lineageTag: d7620a03-1c3f-4dab-9bbe-7f11b0ce15be
+		sourceLineageTag: 40bafa69-0746-4752-9335-b9cf00eecfca
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_project
+
+		annotation SummarizationSetBy = User
+
+	column idd_gcp_cost_allocation
+		dataType: string
+		isHidden
+		lineageTag: c4240c46-4993-42d0-9cac-57d5f5ff8c7e
+		sourceLineageTag: 6692d4de-8696-4cff-8e73-2c9e6f5b2b13
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_cost_allocation
+
+		annotation SummarizationSetBy = User
+
+	column idd_gcp_credits
+		dataType: string
+		isHidden
+		lineageTag: 33ba402a-a6d0-4418-9552-3a7eaba994e6
+		sourceLineageTag: 0f6c89e3-531c-4e48-8388-e4b09d1b8f86
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_credits
+
+		annotation SummarizationSetBy = User
+
+	column idd_gcp_sku
+		dataType: string
+		isHidden
+		lineageTag: d3628365-309c-4438-b672-aed14f24c323
+		sourceLineageTag: 04ddc889-fdfd-4d72-9dc6-6267c5654e87
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_sku
+
+		annotation SummarizationSetBy = User
+
+	column idd_gcp_location
+		dataType: string
+		isHidden
+		lineageTag: d80e6cef-a5a8-4c28-949e-33b38977b407
+		sourceLineageTag: c2a03202-1704-4f31-8f32-27a8f28ccf7a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_location
+
+		annotation SummarizationSetBy = User
+
+	column D_DATE_RUN
+		dataType: dateTime
+		isHidden
+		formatString: General Number
+		lineageTag: f37780ef-6f26-4a6c-bf55-067d881929c9
+		sourceLineageTag: f9d6b8fd-bc15-475b-8890-d997a0fb26ed
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_DATE_RUN
+
+		annotation SummarizationSetBy = User
+
+	column D_DATE_INVOICE
+		dataType: dateTime
+		isHidden
+		formatString: General Number
+		lineageTag: 4c4a9ef6-a978-4ae0-8bf7-afc621b358a9
+		sourceLineageTag: 5c245566-7009-401c-96c1-63016c5ae122
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_DATE_INVOICE
+
+		annotation SummarizationSetBy = User
+
+	column idd_gcp_resource
+		dataType: string
+		isHidden
+		lineageTag: 62e76b24-7904-408e-9d96-3e6da9c9ea26
+		sourceLineageTag: 4ee9c325-8929-4133-b42f-bfb0ef5f26ee
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_resource
+
+		annotation SummarizationSetBy = User
+
+	column idd_gcp_label
+		dataType: string
+		isHidden
+		lineageTag: 8cd7c6fb-d502-4c25-b417-3211e371d69e
+		sourceLineageTag: 30d3d022-670c-40f7-8242-3478ed585d3e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_label
+
+		annotation SummarizationSetBy = User
+
+	column cost_sharing_category
+		dataType: string
+		lineageTag: 08a18881-91ef-4b01-bfa8-5f2dc3edff49
+		sourceLineageTag: 4dd2c756-c697-4d45-83bf-9b2755d62832
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: cost_sharing_category
+
+		annotation SummarizationSetBy = User
+
+	column idd_gcp_pgs_custom_label
+		dataType: string
+		isHidden
+		lineageTag: 3d13efa9-d8ac-4dec-b1ab-e937c426ec5f
+		sourceLineageTag: 89129999-5f47-4bea-b75f-c4fb22c71617
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_pgs_custom_label
+
+		annotation SummarizationSetBy = User
+
+	column cost
+		dataType: double
+		lineageTag: b84c571e-24b6-4817-87d3-84a2c026ab6a
+		sourceLineageTag: a8913cc7-645a-4415-9274-5e4bd8a94c92
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: cost
+
+		annotation SummarizationSetBy = User
+
+	column credits
+		dataType: double
+		lineageTag: f3247886-c593-4317-9f04-a67dc7ff9387
+		sourceLineageTag: f6a57116-61cd-4edf-bfd0-2e6dbdb6f919
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: credits
+
+		annotation SummarizationSetBy = User
+
+	column cost_minus_credits
+		dataType: double
+		lineageTag: a3d012b3-b9e0-470a-bae1-ab82d4b42783
+		sourceLineageTag: 02e814d9-4c1b-4cfc-9f14-2ce8f47ba0e3
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: cost_minus_credits
+
+		annotation SummarizationSetBy = User
+
+	column cost_minus_credits_inc_shared
+		dataType: double
+		lineageTag: 4728732e-6d1b-4980-8776-7dc599a5d3f7
+		sourceLineageTag: 1d2e9a6b-520b-4936-9548-5bfa81320930
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: cost_minus_credits_inc_shared
+
+		annotation SummarizationSetBy = User
+
+	column shared_cost_component
+		dataType: double
+		lineageTag: 79776959-a791-4256-bab4-999d60dea759
+		sourceLineageTag: 354c1ede-b342-4a82-b4b8-b003ed72a886
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: shared_cost_component
+
+		annotation SummarizationSetBy = User
+
+	column usage_amount
+		dataType: double
+		lineageTag: 0490788d-e872-4d80-b024-8e6a12b8a4f6
+		sourceLineageTag: 0778bd88-530c-42e8-9bbc-c30a58b91d69
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: usage_amount
+
+		annotation SummarizationSetBy = User
+
+	column usage_amount_in_pricing_units
+		dataType: double
+		lineageTag: 58abbaaf-c43b-441e-a4bd-bfc13e8b719a
+		sourceLineageTag: c3918a94-2f81-4e59-94f3-5c3398077796
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: usage_amount_in_pricing_units
+
+		annotation SummarizationSetBy = User
+
+	partition F_GCP_COST__DIRECT_QUERY = entity
+		mode: directQuery
+		source
+			entityName: F_GCP_COST__DIRECT_QUERY
+			expressionSource: 'DirectQuery til AS – GCP Usage & Billing data model'
+
+	annotation PBI_ResultType = Exception
+

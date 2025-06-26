@@ -1,0 +1,87 @@
+table K_GCP_BILLING_REFRESH_TIMES
+	lineageTag: 79cd282f-7cb0-44c5-b9aa-1eba07334beb
+	sourceLineageTag: 8db8cdaa-0b76-498c-9cfc-9671937cd48c
+
+	column TIMESTAMP_DATASET_REFRESH
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 528cc92b-c6bd-4e6d-9d3d-52f84f353a06
+		sourceLineageTag: 7e73a88f-80dc-41af-9f06-e8a901177bd3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TIMESTAMP_DATASET_REFRESH
+
+		annotation SummarizationSetBy = User
+
+	column TIMESTAMP_LATEST_DATA_IN_SOURCE_AT_REFRESH
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 3e69e8cc-997c-4189-b9b8-092e98abbd31
+		sourceLineageTag: 188445e3-fef7-4170-9e03-1d414795367d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TIMESTAMP_LATEST_DATA_IN_SOURCE_AT_REFRESH
+
+		annotation SummarizationSetBy = User
+
+	column TIME_DATASET_REFRESH
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 8d01ccb9-fe11-4225-afce-2e2addf8371c
+		sourceLineageTag: 01a9a733-76f7-4828-98ff-5fa17098c24d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TIME_DATASET_REFRESH
+
+		annotation SummarizationSetBy = User
+
+	column DATE_DATASET_REFRESH
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6cc7ca3b-3514-48df-9396-1a9789b6d064
+		sourceLineageTag: 175e5130-3868-4383-afa2-e92acc5ed1dd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DATE_DATASET_REFRESH
+
+		annotation SummarizationSetBy = User
+
+	column STRING_DATETIME_DATASET_REFRESH
+		dataType: string
+		lineageTag: 67f9e9d9-87aa-406e-b002-6e3b791bc626
+		sourceLineageTag: eefc3275-1ff3-455f-b200-5e08e251375a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: STRING_DATETIME_DATASET_REFRESH
+
+		annotation SummarizationSetBy = User
+
+	column STRING_DATETIME_LATEST_DATA_IN_SOURCE_AT_REFRESH
+		dataType: string
+		lineageTag: 23c08187-655c-4b95-afea-25bf4b93913f
+		sourceLineageTag: 4755d2b8-4649-478c-8519-b799ebaf3bbc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: STRING_DATETIME_LATEST_DATA_IN_SOURCE_AT_REFRESH
+
+		annotation SummarizationSetBy = User
+
+	column MINUTES_AGE_OF_DATA_IN_SOURCE_AT_LAST_DATASET_REFRESH
+		dataType: int64
+		formatString: 0
+		lineageTag: fa6f8eb3-96f9-4cf7-9118-4a86669131cb
+		sourceLineageTag: 7cc57341-15f2-4e96-b041-af6c15743dd8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: MINUTES_AGE_OF_DATA_IN_SOURCE_AT_LAST_DATASET_REFRESH
+
+		annotation SummarizationSetBy = User
+
+	partition K_GCP_BILLING_REFRESH_TIMES = entity
+		mode: directQuery
+		source
+			entityName: K_GCP_BILLING_REFRESH_TIMES
+			expressionSource: 'DirectQuery til AS – GCP Usage & Billing data model'
+
+	annotation PBI_ResultType = Exception
+

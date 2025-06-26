@@ -1,0 +1,214 @@
+table D_GCP_PROJECT
+	lineageTag: 338f236d-010c-4413-9193-062edce4d454
+	sourceLineageTag: f8b724f4-7ae4-4c0e-801f-4e34861a0f4a
+
+	column project_number
+		dataType: string
+		lineageTag: e0661245-b91d-4ea0-bdac-5fc362e23220
+		sourceLineageTag: bb2ee1c2-51c8-45c1-bdb1-42fe7ece924e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_number
+
+		annotation SummarizationSetBy = User
+
+	column project_name
+		dataType: string
+		lineageTag: c1b84c83-f889-4789-919d-4be999489f58
+		sourceLineageTag: 90caadbe-4be2-4571-ae6c-1006f76af501
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_name
+
+		annotation SummarizationSetBy = User
+
+	column project_ancestry_numbers
+		dataType: string
+		lineageTag: c6d963e0-0deb-461a-8633-3762159c1791
+		sourceLineageTag: 59cead81-81ad-4f72-824d-5605f7c1e0e0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_ancestry_numbers
+
+		annotation SummarizationSetBy = User
+
+	column project_id
+		dataType: string
+		lineageTag: 855b9105-d622-4cb7-b23a-ed6ba5fe89f6
+		sourceLineageTag: bb40f7c1-ba10-4764-9916-0c821f4cda8c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_id
+
+		annotation SummarizationSetBy = User
+
+	column project_env
+		dataType: string
+		lineageTag: 57bada20-a722-4c07-98d8-bff96505fd4e
+		sourceLineageTag: c8123dec-c8e6-4bb7-942f-a037e95af292
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_env
+
+		annotation SummarizationSetBy = User
+
+	column idd_gcp_project
+		dataType: string
+		isHidden
+		isNullable: false
+		lineageTag: e72af603-daa2-40da-910d-4f4ae051bb1a
+		sourceLineageTag: 5544941f-208b-4d43-b271-e24b42d3c70c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_project
+
+		annotation SummarizationSetBy = User
+
+	column project_organization_name
+		dataType: string
+		lineageTag: 9be28933-d7f0-49dd-9dcf-1fd5d2000ab7
+		sourceLineageTag: 9f04c4d4-b5e4-4158-bb34-544689adf244
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_organization_name
+
+		annotation SummarizationSetBy = User
+
+	column project_folder_lv1
+		dataType: string
+		lineageTag: ced197a2-0760-410f-880f-3d3fd6a71163
+		sourceLineageTag: 519fcb85-1065-468c-bc48-56ff40ebb521
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_folder_lv1
+
+		annotation SummarizationSetBy = User
+
+	column project_folder_lv2
+		dataType: string
+		lineageTag: 16a0e542-d2d2-40c2-b3fb-36b8c90f872a
+		sourceLineageTag: e83b7d49-4eb0-478d-9d65-d65bee6a06ed
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_folder_lv2
+
+		annotation SummarizationSetBy = User
+
+	column project_folders_hierarchy
+		dataType: string
+		lineageTag: e5e61b6d-3378-42a2-b028-d9bfa0a7a184
+		sourceLineageTag: 24197f1e-84b5-4cc9-a1c9-43f2ef93a4ea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_folders_hierarchy
+
+		annotation SummarizationSetBy = User
+
+	column project_organization_number
+		dataType: string
+		lineageTag: 19189ab1-2704-4495-b89a-0bcdd17d1f76
+		sourceLineageTag: e44b6bfb-a60c-4c74-be14-ade6e2c2b76c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_organization_number
+
+		annotation SummarizationSetBy = User
+
+	column project_owner
+		dataType: string
+		lineageTag: f3cf87c9-8d5a-4e02-9d7b-1b294c3a2895
+		sourceLineageTag: ac163fee-522e-4ec4-b116-e48bc7988d24
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_owner
+
+		annotation SummarizationSetBy = User
+
+	column billing_account_id
+		dataType: string
+		lineageTag: 224b64f6-78c2-430b-8c8f-0e79fef72180
+		sourceLineageTag: 382dcefa-7148-4bc4-9139-1023b4674e81
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: billing_account_id
+
+		annotation SummarizationSetBy = User
+
+	column project_folder_lv3
+		dataType: string
+		lineageTag: 1263b156-a832-4c92-8ae5-c75863b22f5a
+		sourceLineageTag: 71bf80ae-7657-494b-b11e-411094f55249
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_folder_lv3
+
+		annotation SummarizationSetBy = User
+
+	column project_folder_lv4
+		dataType: string
+		lineageTag: e249135e-460a-4f10-ab0a-b0840528e60f
+		sourceLineageTag: 71e21c79-dc26-45d0-9b64-d33855c87740
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_folder_lv4
+
+		annotation SummarizationSetBy = User
+
+	column project_folder_lv5
+		dataType: string
+		lineageTag: bf380453-e5f6-490c-bafe-1a95cceb2a0d
+		sourceLineageTag: c4117fae-fcd4-4b20-b30c-cdd3dd0d6bce
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_folder_lv5
+
+		annotation SummarizationSetBy = User
+
+	column project_folder_lv6
+		dataType: string
+		lineageTag: 9b292d4d-a2b3-4e5b-9546-2681d201b26e
+		sourceLineageTag: 663d729f-a7d2-40b3-824d-8d0a9ed5be8f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_folder_lv6
+
+		annotation SummarizationSetBy = User
+
+	column project_folder_lv7
+		dataType: string
+		lineageTag: 4c40e41d-6be9-4f75-a318-f7f11545681b
+		sourceLineageTag: 7c641fa7-afe7-4b89-8148-f03c742a06fc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_folder_lv7
+
+		annotation SummarizationSetBy = User
+
+	column project_folder_lv8
+		dataType: string
+		lineageTag: b657563e-fdb7-4bef-87fc-235753221892
+		sourceLineageTag: ec24289f-f395-46a0-adc4-c62389eb9387
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_folder_lv8
+
+		annotation SummarizationSetBy = User
+
+	column project_folder_lv9
+		dataType: string
+		lineageTag: 75f74734-0beb-4733-a312-756a6025746f
+		sourceLineageTag: 5440683b-edaa-4c5e-829a-b77273cb3b1c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: project_folder_lv9
+
+		annotation SummarizationSetBy = User
+
+	partition D_GCP_PROJECT = entity
+		mode: directQuery
+		source
+			entityName: D_GCP_PROJECT
+			expressionSource: 'DirectQuery til AS – GCP Usage & Billing data model'
+
+	annotation PBI_ResultType = Exception
+

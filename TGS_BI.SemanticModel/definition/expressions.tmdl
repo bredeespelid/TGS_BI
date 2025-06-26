@@ -1,0 +1,11 @@
+expression 'DirectQuery til AS – GCP Usage & Billing data model' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/GCP%20Usage%20%26%20Billing%20data%20model", "GCP Usage & Billing data model"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 94969006-f3f0-479e-b9a9-38dba614bdf4
+
+	annotation PBI_IncludeFutureArtifacts = True
+

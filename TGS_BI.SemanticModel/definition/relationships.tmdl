@@ -1,0 +1,88 @@
+relationship 6b4d8172-0b3c-4fe4-b086-de2a8c3f1370
+	crossFilteringBehavior: bothDirections
+	fromColumn: F_GCP_COST.idd_gcp_project
+	toColumn: D_GCP_PROJECT.idd_gcp_project
+
+relationship dbe8bc9f-afed-4ec3-b286-d34e6abfc4ae
+	fromColumn: F_GCP_COST.idd_gcp_cost_allocation
+	toColumn: D_GCP_COST_ALLOCATION.idd_gcp_cost_allocation
+
+relationship 0a4269ab-2a7d-4364-8588-1a6b37cb3757
+	fromColumn: F_GCP_COST.idd_gcp_credits
+	toColumn: D_GCP_CREDITS.idd_gcp_credits
+
+relationship 151913a3-cbca-4fcb-a3da-0a76120259aa
+	fromColumn: F_GCP_COST.idd_gcp_sku
+	toColumn: D_GCP_SKU.idd_gcp_sku
+
+relationship 98b098d3-efdd-42a2-80c9-2e5e028c9655
+	fromColumn: F_GCP_COST.idd_gcp_location
+	toColumn: D_GCP_LOCATION.idd_gcp_location
+
+relationship cf09d194-58f2-4e38-ab6e-d2cabef6d12f
+	fromColumn: F_GCP_COST.D_DATE_RUN
+	toColumn: D_WH_DATE_RUN.D_DATE
+
+relationship f28b6783-ddaf-49d0-9583-d8671d178818
+	fromColumn: F_GCP_COST.D_DATE_INVOICE
+	toColumn: D_WH_MONTH_INVOICE.d_month
+
+relationship 12313fe3-af35-4861-bbcd-5d2dfb3277bf
+	fromColumn: F_GCP_COST.idd_gcp_resource
+	toColumn: D_GCP_RESOURCE.idd_gcp_resource
+
+relationship 5f1650c6-8430-42c7-8e8f-6b06ac33601e
+	crossFilteringBehavior: bothDirections
+	fromColumn: F_GCP_COST.idd_gcp_pgs_custom_label
+	toColumn: D_GCP_PGS_CUSTOM_LABEL.idd_gcp_pgs_custom_label
+
+relationship d1f95290-8be1-4e8b-b209-47403849a24a
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: F_GCP_COST.idd_gcp_label
+	toColumn: D_GCP_LABEL.idd_gcp_label
+
+relationship 06c33e49-90bb-4fcb-8f7e-93b932f60fcc
+	fromColumn: F_GCP_COST__DIRECT_QUERY.D_DATE_INVOICE
+	toColumn: D_WH_MONTH_INVOICE.d_month
+
+relationship 20112914-11d8-4b8e-b79b-aa55fbe76d85
+	fromColumn: F_GCP_COST__DIRECT_QUERY.D_DATE_RUN
+	toColumn: D_WH_DATE_RUN.D_DATE
+
+relationship dd4bff98-ee8b-4059-89a8-33960358555f
+	fromColumn: F_GCP_COST__DIRECT_QUERY.idd_gcp_cost_allocation
+	toColumn: D_GCP_COST_ALLOCATION.idd_gcp_cost_allocation
+
+relationship a528c4fa-d97a-4110-ab33-fca20ff4edf4
+	fromColumn: F_GCP_COST__DIRECT_QUERY.idd_gcp_credits
+	toColumn: D_GCP_CREDITS.idd_gcp_credits
+
+relationship e51b1cba-bc42-4cff-b138-f5652eae7e34
+	fromColumn: F_GCP_COST__DIRECT_QUERY.idd_gcp_sku
+	toColumn: D_GCP_SKU.idd_gcp_sku
+
+relationship 50a3494c-cd1a-41dd-8d07-c99e438d5c45
+	fromColumn: F_GCP_COST__DIRECT_QUERY.idd_gcp_location
+	toColumn: D_GCP_LOCATION.idd_gcp_location
+
+relationship fd7ba582-4c21-4234-b2ce-852349edeaf2
+	crossFilteringBehavior: bothDirections
+	fromColumn: F_GCP_COST__DIRECT_QUERY.idd_gcp_label
+	toColumn: D_GCP_PGS_CUSTOM_LABEL__DIRECT_QUERY.idd_gcp_pgs_custom_label
+
+relationship cf6cab6e-0bf6-4889-99fc-71570d9e0b76
+	crossFilteringBehavior: bothDirections
+	fromColumn: F_GCP_COST__DIRECT_QUERY.idd_gcp_project
+	toColumn: D_GCP_PROJECT__DIRECT_QUERY.idd_gcp_project
+
+relationship bc1c68ed-1283-495e-a088-b221ab4cc24b
+	fromColumn: F_GCP_COST__DIRECT_QUERY.idd_gcp_resource
+	toColumn: D_GCP_RESOURCE.idd_gcp_resource
+
+relationship 89b3a50f-5b2d-4554-bef5-ffb4aadb7589
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: D_GCP_LABEL__DIRECT_QUERY.idd_gcp_label
+	toColumn: F_GCP_COST__DIRECT_QUERY.idd_gcp_label
+

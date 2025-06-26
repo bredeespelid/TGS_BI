@@ -1,0 +1,257 @@
+table D_WH_DATE_RUN
+	lineageTag: 66972414-74fa-4c75-874d-0ec2edc2a385
+	sourceLineageTag: 854d55cf-a897-4138-a30f-fa16f6101556
+
+	column CNT_DAYS_FROM_YEAR_BEG
+		dataType: int64
+		formatString: 0
+		lineageTag: 862e595d-787c-4278-801c-95733aef229a
+		sourceLineageTag: 8372fc96-85b3-49cb-ad41-d203d6179843
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: CNT_DAYS_FROM_YEAR_BEG
+
+		annotation SummarizationSetBy = User
+
+	column D_DATE
+		dataType: dateTime
+		isNullable: false
+		formatString: Short Date
+		lineageTag: 1bc92c52-164b-42a0-843e-f6f152c563da
+		sourceLineageTag: 837fdd94-ea00-44a4-9553-7981ff669216
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_DATE
+
+		annotation SummarizationSetBy = User
+
+	column D_MONTH
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: bc67f4a9-6ab8-4842-b068-c9bee60a1872
+		sourceLineageTag: cb146cae-5295-4626-9231-595c86951eb4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_MONTH
+
+		annotation SummarizationSetBy = User
+
+	column D_QUARTER
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: dbcfa3b0-9b23-4c7d-9381-7dd6e562b5da
+		sourceLineageTag: 904e517b-e441-42b5-93b0-703df0083fa9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_QUARTER
+
+		annotation SummarizationSetBy = User
+
+	column D_MONTH_END
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: d318895a-db5c-47d7-b6d9-41455eaad27e
+		sourceLineageTag: 299a23f8-ca77-49e0-8018-ab54cda3856a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_MONTH_END
+
+		annotation SummarizationSetBy = User
+
+	column MONTH_NUM
+		dataType: int64
+		formatString: 0
+		lineageTag: 674371e5-a91e-4283-84d1-859574512a94
+		sourceLineageTag: 0a920dde-dca0-48b2-a8df-8a1039f848f4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MONTH_NUM
+
+		annotation SummarizationSetBy = User
+
+	column MONTH_NAME_NO
+		dataType: string
+		lineageTag: f42991c8-33b7-4059-8de9-6a9e6bc3d33c
+		sourceLineageTag: e9fed53e-d610-4682-9112-1755d8dec3a9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MONTH_NAME_NO
+
+		annotation SummarizationSetBy = User
+
+	column MONTH_NAME_EN
+		dataType: string
+		lineageTag: 8089fc70-7417-4633-9bc5-d690c575b954
+		sourceLineageTag: 4b43a47b-2816-4d27-ba65-2c761b2bdace
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MONTH_NAME_EN
+
+		annotation SummarizationSetBy = User
+
+	column MONTH_CODE
+		dataType: string
+		lineageTag: 0a209621-99f0-408d-b8e9-0a4692fb9a4c
+		sourceLineageTag: b9a93fe8-b834-44fb-a97e-4790a26a0b60
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MONTH_CODE
+
+		annotation SummarizationSetBy = User
+
+	column MONTH_CODE_REVERSED
+		dataType: string
+		lineageTag: 2aed8b2c-4c8c-42d8-b78f-0d815756de6e
+		sourceLineageTag: 8e390a47-885e-450d-9904-1c3073366445
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MONTH_CODE_REVERSED
+
+		annotation SummarizationSetBy = User
+
+	column YEAR
+		dataType: int64
+		formatString: 0
+		lineageTag: 3ca8fbd8-7c90-4386-ab50-ff345845991e
+		sourceLineageTag: d3790946-ba55-48a7-b132-0bf9950ee266
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: YEAR
+
+		annotation SummarizationSetBy = User
+
+	column QUARTER_NUM
+		dataType: int64
+		formatString: 0
+		lineageTag: 35fb1cbe-158d-4a55-a0f3-8abee8a799a3
+		sourceLineageTag: c3a4c08f-2202-4c7a-bc45-ef1f5846f298
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: QUARTER_NUM
+
+		annotation SummarizationSetBy = User
+
+	column QUARTER_CODE
+		dataType: string
+		lineageTag: 3c92b396-1ad8-4621-926c-338b7da0e0a2
+		sourceLineageTag: caf0c615-f0cf-48d1-94c9-a9c2a5867a57
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: QUARTER_CODE
+
+		annotation SummarizationSetBy = User
+
+	column WEEK_NUM
+		dataType: string
+		lineageTag: a2f3cc8d-8101-4d0a-bf2b-8248b19d3144
+		sourceLineageTag: 215ad168-331a-4676-ab78-2e41f06b0e69
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WEEK_NUM
+
+		annotation SummarizationSetBy = User
+
+	column WEEK_CODE
+		dataType: string
+		lineageTag: a6940783-f0bf-4b7a-b910-a384df05319e
+		sourceLineageTag: 1cddb5ff-4d01-46f4-869a-9ebc94154410
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WEEK_CODE
+
+		annotation SummarizationSetBy = User
+
+	column D_WEEK_START
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 226bbcfc-3c6a-4bad-9dfd-4d2fd2e7930e
+		sourceLineageTag: f5774523-a4b5-4766-a2aa-5df13270624e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_WEEK_START
+
+		annotation SummarizationSetBy = User
+
+	column MONTH_NAME_SHORT_NO
+		dataType: string
+		lineageTag: 6e67c4f7-9406-447a-b6e4-8585170a3293
+		sourceLineageTag: a9f34257-a5bc-474b-91ab-98d62fe72a4f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MONTH_NAME_SHORT_NO
+
+		annotation SummarizationSetBy = User
+
+	column MONTH_NAME_SHORT_EN
+		dataType: string
+		lineageTag: ac9a4422-b9f7-40f7-acd9-01fa3893074e
+		sourceLineageTag: af24eb74-9f4b-4db3-bd28-986be0b1b970
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MONTH_NAME_SHORT_EN
+
+		annotation SummarizationSetBy = User
+
+	column D_DATE_MA
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 98fd2099-d946-429b-b890-7f7568f4e838
+		sourceLineageTag: e7f65c58-c649-41ba-8a29-4f51d3b64180
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_DATE_MA
+
+		annotation SummarizationSetBy = User
+
+	column D_DATE_YA
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 944eb60b-0688-43b2-a8e6-81f1f9736787
+		sourceLineageTag: 7e057887-14ae-4233-9f77-8983c4b7b85b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_DATE_YA
+
+		annotation SummarizationSetBy = User
+
+	column CNT_DAYS_IN_MONTH
+		dataType: int64
+		formatString: 0
+		lineageTag: 6310297d-9a9d-4f48-b03f-1fedf4b3c23d
+		sourceLineageTag: 88ec213c-dfd7-4208-9320-3da581f5337b
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: CNT_DAYS_IN_MONTH
+
+		annotation SummarizationSetBy = User
+
+	column CNT_DAYS_IN_QUARTER
+		dataType: int64
+		formatString: 0
+		lineageTag: fc00f842-0537-4ba9-b632-3434bfbf48b7
+		sourceLineageTag: 2c87501c-533c-44b8-8923-06bce792c2bc
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: CNT_DAYS_IN_QUARTER
+
+		annotation SummarizationSetBy = User
+
+	column DATE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 12585775-f21d-4253-9a9e-b464cdfd02e7
+		sourceLineageTag: 8302ba13-64b4-4b1c-a683-90b04e3eaf72
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DATE_CODE
+
+		annotation SummarizationSetBy = User
+
+	partition D_WH_DATE_RUN = entity
+		mode: directQuery
+		source
+			entityName: D_WH_DATE_RUN
+			expressionSource: 'DirectQuery til AS – GCP Usage & Billing data model'
+
+	annotation PBI_ResultType = Exception
+

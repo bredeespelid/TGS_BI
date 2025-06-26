@@ -1,0 +1,171 @@
+table D_WH_MONTH_INVOICE
+	lineageTag: 51db2f9c-d4d9-4396-8fc5-6b55dede3fa2
+	sourceLineageTag: 110e7dbf-b5b9-4685-bdc5-d75f12898a4d
+
+	column d_month
+		dataType: dateTime
+		isNullable: false
+		formatString: Short Date
+		lineageTag: 3a315a9f-8aa9-4b64-b45c-f480f63a4743
+		sourceLineageTag: 2e49b914-542e-4eb9-850f-0301c8049862
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: d_month
+
+		annotation SummarizationSetBy = User
+
+	column d_month_end
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 5bae4206-95cf-42af-a68b-e50c9881ad82
+		sourceLineageTag: 5ad12831-9f52-4c39-9bfe-1c32afe5de72
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: d_month_end
+
+		annotation SummarizationSetBy = User
+
+	column month_num
+		dataType: int64
+		formatString: 0
+		lineageTag: 3688c819-c68d-4eac-855a-71fd1823ff91
+		sourceLineageTag: ed800a03-f946-4cfb-97b8-c94e139c4ac7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: month_num
+
+		annotation SummarizationSetBy = User
+
+	column month_name_no
+		dataType: string
+		lineageTag: 8bec2a83-484e-406c-a5a4-04f3abd155eb
+		sourceLineageTag: d9b5a632-3fec-4f77-9652-76d907bc82b9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: month_name_no
+
+		annotation SummarizationSetBy = User
+
+	column month_name_en
+		dataType: string
+		lineageTag: 008698e1-85c2-4831-be2b-f52fd0950f65
+		sourceLineageTag: fb46cf60-341e-465d-9462-b879511b66b6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: month_name_en
+
+		annotation SummarizationSetBy = User
+
+	column month_code
+		dataType: string
+		lineageTag: 8d8935e6-44a5-4443-84cb-7f915ebb328f
+		sourceLineageTag: 12be8764-bcc4-4063-bee0-eb6df999fb03
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: month_code
+
+		annotation SummarizationSetBy = User
+
+	column month_code_reversed
+		dataType: string
+		lineageTag: 66027647-1308-4b4e-a9d0-a1ea98c784b8
+		sourceLineageTag: c91ea556-063f-48c8-aa53-389171f042f6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: month_code_reversed
+
+		annotation SummarizationSetBy = User
+
+	column YEAR
+		dataType: int64
+		formatString: 0
+		lineageTag: 68bc975e-5644-4cb1-952f-ed750594e027
+		sourceLineageTag: 1f78e073-5168-45b1-85af-7a77bd7ff75b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: YEAR
+
+		annotation SummarizationSetBy = User
+
+	column quarter_num
+		dataType: int64
+		formatString: 0
+		lineageTag: eb530968-0313-44b9-bda6-218c5b7ffef6
+		sourceLineageTag: 83ff1b02-0e34-43db-96f2-f76c13308a43
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: quarter_num
+
+		annotation SummarizationSetBy = User
+
+	column quarter_code
+		dataType: string
+		lineageTag: 28c0b725-cb97-4254-b383-a9277b2e9d57
+		sourceLineageTag: b4d751c3-a02e-4886-9ecb-90d235f37e40
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: quarter_code
+
+		annotation SummarizationSetBy = User
+
+	column month_name_short_no
+		dataType: string
+		lineageTag: 7ac6af08-f8c2-4bb5-89c0-fc090ee21664
+		sourceLineageTag: a6aa20f8-5b8b-4e59-86c3-5b65b55ed499
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: month_name_short_no
+
+		annotation SummarizationSetBy = User
+
+	column month_name_short_en
+		dataType: string
+		lineageTag: bdfd87a5-ad8e-484c-8fcb-efb2d7937436
+		sourceLineageTag: 48699591-915a-405a-90aa-a969b508694d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: month_name_short_en
+
+		annotation SummarizationSetBy = User
+
+	column cnt_days_in_month
+		dataType: int64
+		formatString: 0
+		lineageTag: 1876da6b-e5a2-48d4-b84a-24190758e0dd
+		sourceLineageTag: e476ddc8-d97d-47d5-ad3f-fb64d8f6e55e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: cnt_days_in_month
+
+		annotation SummarizationSetBy = User
+
+	column month_offset_from_current_month
+		dataType: int64
+		formatString: 0
+		lineageTag: 04060790-5858-487c-8f62-f0728c1629ee
+		sourceLineageTag: dc7446e9-a5fc-48b7-87e2-2d5c86804432
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: month_offset_from_current_month
+
+		annotation SummarizationSetBy = User
+
+	column invoice_complete
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0e84d21a-1ef8-42fe-b852-1c1b4557219c
+		sourceLineageTag: e26008c2-c8c3-4137-8f87-9fd9c7259103
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: invoice_complete
+
+		annotation SummarizationSetBy = User
+
+	partition D_WH_MONTH_INVOICE = entity
+		mode: directQuery
+		source
+			entityName: D_WH_MONTH_INVOICE
+			expressionSource: 'DirectQuery til AS – GCP Usage & Billing data model'
+
+	annotation PBI_ResultType = Exception
+

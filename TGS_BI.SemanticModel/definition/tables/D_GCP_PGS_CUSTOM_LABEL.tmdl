@@ -1,0 +1,155 @@
+table D_GCP_PGS_CUSTOM_LABEL
+	lineageTag: 227e0e26-510c-4380-b3ac-de09faf06c5e
+	sourceLineageTag: 915a8513-762f-4a1e-926a-0ea1a8bb1f43
+
+	column spark_imaging_project
+		dataType: string
+		lineageTag: d246de59-7e71-4ed2-9c7b-e20369908efd
+		sourceLineageTag: 96ad4928-a2fd-4a54-bfee-50130f9bd9ec
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: spark_imaging_project
+
+		annotation SummarizationSetBy = User
+
+	column spark_application_name
+		dataType: string
+		lineageTag: 2b19d373-eed3-4ef5-978f-87f4e788711b
+		sourceLineageTag: c83b3411-40c1-4026-b951-fe8a7f586694
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: spark_application_name
+
+		annotation SummarizationSetBy = User
+
+	column spark_simplified_template_name
+		dataType: string
+		lineageTag: c5699f68-0311-4a2a-8180-94aa771e30a8
+		sourceLineageTag: 24ee27a5-5156-4ae3-8b01-b590cf1c1feb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: spark_simplified_template_name
+
+		annotation SummarizationSetBy = User
+
+	column sys_type
+		dataType: string
+		lineageTag: 2efb5666-0519-4d2c-9cb9-e77b3d842737
+		sourceLineageTag: f5fcb768-62e8-46ab-a614-c1d178c2af67
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: sys_type
+
+		annotation SummarizationSetBy = User
+
+	column spark_imaging_content
+		dataType: string
+		lineageTag: 4c7913f3-3c0a-4a7e-8331-0907290a281e
+		sourceLineageTag: aa0f08da-8689-4377-8a8d-639fda1eee08
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: spark_imaging_content
+
+		annotation SummarizationSetBy = User
+
+	column idd_gcp_pgs_custom_label
+		dataType: string
+		isHidden
+		isNullable: false
+		lineageTag: 57fa2e3f-ece3-4134-84e9-ba5dee4e740f
+		sourceLineageTag: d35f356f-63b9-4da0-aad7-8d314b4d2e79
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_pgs_custom_label
+
+		annotation SummarizationSetBy = User
+
+	column application_name
+		dataType: string
+		lineageTag: 7358f90c-7983-413b-b36d-1ee5df41788b
+		sourceLineageTag: b6c61412-3c82-4768-bbdf-bc1f5c150762
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: application_name
+
+		annotation SummarizationSetBy = User
+
+	column spark_application_version
+		dataType: string
+		lineageTag: 6a0d288c-8da4-474c-9c25-104756569f28
+		sourceLineageTag: 91bcbf7c-53a0-4571-bbf8-81d02752aef1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: spark_application_version
+
+		annotation SummarizationSetBy = User
+
+	column type
+		dataType: string
+		lineageTag: 9855a020-0fb1-44d9-92cb-d5b1f42faafe
+		sourceLineageTag: eb1275bb-ed7d-4da1-80f4-59b83cb50111
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = User
+
+	column K8s_expli_ch_code
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b6427e61-cc24-4050-a2df-9e08dd03e0be
+		sourceLineageTag: 374e2926-4d9a-4596-97b4-de72ca75fe14
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: K8s_expli_ch_code
+
+		annotation SummarizationSetBy = User
+
+	column k8s_name_space_or_gcp_proj
+		dataType: string
+		lineageTag: 0a6a4727-e23f-4444-bb5f-e3222dfdce33
+		sourceLineageTag: b60ea1d2-c470-445b-9251-bce7a695671e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: k8s_name_space_or_gcp_proj
+
+		annotation SummarizationSetBy = User
+
+	column k8s_name_space_or_gcp_proj_src
+		dataType: string
+		lineageTag: 132d4ff9-8847-411f-8e02-1e53e2696f5d
+		sourceLineageTag: b9949b40-2155-40ae-9e6f-d56def1a38e0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: k8s_name_space_or_gcp_proj_src
+
+		annotation SummarizationSetBy = User
+
+	column goog_k8s_cluster_name
+		dataType: string
+		lineageTag: 81414d08-8b76-4cc0-9bc9-459882ab4ff4
+		sourceLineageTag: c4e26923-6bb4-4e20-9ffe-f1d41110045d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: goog_k8s_cluster_name
+
+		annotation SummarizationSetBy = User
+
+	column k8s_cluster_domain
+		dataType: string
+		lineageTag: 977eddd3-b78c-4d0c-a6c8-cb30b3861b66
+		sourceLineageTag: d783a0bc-4d38-41db-b63a-fd6a3993fd11
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: k8s_cluster_domain
+
+		annotation SummarizationSetBy = User
+
+	partition D_GCP_PGS_CUSTOM_LABEL = entity
+		mode: directQuery
+		source
+			entityName: D_GCP_PGS_CUSTOM_LABEL
+			expressionSource: 'DirectQuery til AS – GCP Usage & Billing data model'
+
+	annotation PBI_ResultType = Exception
+

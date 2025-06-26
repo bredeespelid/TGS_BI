@@ -1,0 +1,35 @@
+model Model
+	culture: nb-NO
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: nb-NO
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["DirectQuery til AS – GCP Usage & Billing data model"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.144.878.0 (25.06)+9cca29236de5114792f4d7188221f91ad4a5cc50
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table F_GCP_COST
+ref table D_GCP_SKU
+ref table D_GCP_PROJECT
+ref table D_WH_DATE_RUN
+ref table D_GCP_CREDITS
+ref table D_GCP_LOCATION
+ref table D_GCP_PGS_CUSTOM_LABEL
+ref table D_GCP_COST_ALLOCATION
+ref table D_WH_MONTH_INVOICE
+ref table K_GCP_BILLING_REFRESH_TIMES
+ref table D_GCP_RESOURCE
+ref table D_GCP_LABEL
+ref table F_GCP_COST__DIRECT_QUERY
+ref table D_GCP_PGS_CUSTOM_LABEL__DIRECT_QUERY
+ref table D_GCP_LABEL__DIRECT_QUERY
+ref table D_GCP_PROJECT__DIRECT_QUERY
+
+ref cultureInfo nb-NO
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "TGS_BI"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "185d3ce6-976b-4ad3-801c-abb15d8fcac2"
+  }
+}

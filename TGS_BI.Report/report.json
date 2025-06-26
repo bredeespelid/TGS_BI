@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.65\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"269L\"}}}}}]}}",
+      "displayName": "Side 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "5510dfa807e531d0c0da",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"e250b3729e8207ca0434\",\"layouts\":[{\"id\":0,\"position\":{\"x\":39.56363636363636,\"y\":0,\"z\":0,\"width\":1240.4363636363637,\"height\":720.290909090909,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"D_GCP_PROJECT.project_name\"},{\"queryRef\":\"D_GCP_PROJECT.billing_account_id\"},{\"queryRef\":\"Sum(F_GCP_COST.cost)\"},{\"queryRef\":\"D_WH_DATE_RUN.D_MONTH\"},{\"queryRef\":\"D_GCP_SKU.sku_id\"},{\"queryRef\":\"D_GCP_SKU.SKU_Category\"},{\"queryRef\":\"D_GCP_LABEL.Label Key Group\"},{\"queryRef\":\"D_GCP_LABEL.Label Value Group\"},{\"queryRef\":\"D_WH_DATE_RUN.D_DATE\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"D_GCP_PROJECT\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"D_GCP_SKU\",\"Type\":0},{\"Name\":\"d2\",\"Entity\":\"D_GCP_LABEL\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"F_GCP_COST\",\"Type\":0},{\"Name\":\"d3\",\"Entity\":\"D_WH_DATE_RUN\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"project_name\"},\"Name\":\"D_GCP_PROJECT.project_name\",\"NativeReferenceName\":\"project_name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"billing_account_id\"},\"Name\":\"D_GCP_PROJECT.billing_account_id\",\"NativeReferenceName\":\"billing_account_id\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"cost\"}},\"Function\":0},\"Name\":\"Sum(F_GCP_COST.cost)\",\"NativeReferenceName\":\"Sum på cost\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d3\"}},\"Property\":\"D_MONTH\"},\"Name\":\"D_WH_DATE_RUN.D_MONTH\",\"NativeReferenceName\":\"D_MONTH\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"sku_id\"},\"Name\":\"D_GCP_SKU.sku_id\",\"NativeReferenceName\":\"sku_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"SKU Category\"},\"Name\":\"D_GCP_SKU.SKU_Category\",\"NativeReferenceName\":\"SKU Category\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Label Key Group\"},\"Name\":\"D_GCP_LABEL.Label Key Group\",\"NativeReferenceName\":\"Label Key Group\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d2\"}},\"Property\":\"Label Value Group\"},\"Name\":\"D_GCP_LABEL.Label Value Group\",\"NativeReferenceName\":\"Label Value Group\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d3\"}},\"Property\":\"D_DATE\"},\"Name\":\"D_WH_DATE_RUN.D_DATE\",\"NativeReferenceName\":\"D_DATE\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d3\"}},\"Property\":\"D_DATE\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{}}}",
+          "filters": "[{\"name\":\"c8d751b002d13010d08b\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"D_GCP_PROJECT\"}},\"Property\":\"project_name\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"D_GCP_PROJECT\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"project_name\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'tgs-workshop-dev'\"}}],[{\"Literal\":{\"Value\":\"'tgs-wdp-db-stage'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{}}]}},{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"F_GCP_COST\"}},\"Property\":\"cost\"}},\"Function\":0}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"F_GCP_COST\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"cost\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"0L\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false},{\"name\":\"90536ca07a96a6000911\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"D_GCP_LABEL\"}},\"Property\":\"Label Key Group\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"D_GCP_LABEL\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Label Key Group\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'DM Service'\"}}],[{\"Literal\":{\"Value\":\"'DM Service Component'\"}}],[{\"Literal\":{\"Value\":\"'Environment'\"}}],[{\"Literal\":{\"Value\":\"'Environment Owner'\"}}],[{\"Literal\":{\"Value\":\"'Project'\"}}],[{\"Literal\":{\"Value\":\"'Project Code'\"}}],[{\"Literal\":{\"Value\":\"'Customer'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{},\"isHiddenInViewMode\":false},{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"D_WH_DATE_RUN\"}},\"Property\":\"D_DATE\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d3\",\"Entity\":\"D_WH_DATE_RUN\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":1,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d3\"}},\"Property\":\"D_DATE\"}},\"Right\":{\"DateSpan\":{\"Expression\":{\"Literal\":{\"Value\":\"datetime'2025-04-01T00:00:00'\"}},\"TimeUnit\":5}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 720.29,
+          "width": 1240.44,
+          "x": 39.56,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+table D_GCP_LABEL__DIRECT_QUERY
+	lineageTag: 146edddc-0081-4e00-a253-789979077e6d
+	sourceLineageTag: 3764ad09-d0a6-4d72-a7f0-b166c57c4fbb
+
+	column idd_gcp_label
+		dataType: string
+		isHidden
+		lineageTag: c10f0233-2518-4f77-a6b2-ac4ad5886cc1
+		sourceLineageTag: 4ae1e671-11d2-4247-a6b2-171838e90026
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_label
+
+		annotation SummarizationSetBy = User
+
+	column labels_key
+		dataType: string
+		lineageTag: b08340bf-c065-4415-9e29-d167050fd5a6
+		sourceLineageTag: e412483b-728f-4455-bf8a-a89abb073956
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: labels_key
+
+		annotation SummarizationSetBy = User
+
+	column labels_value
+		dataType: string
+		lineageTag: ae758b78-1a07-443e-8894-ea63b756ef58
+		sourceLineageTag: dc97e9c2-532c-4f64-96c1-60439ccb3c9e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: labels_value
+
+		annotation SummarizationSetBy = User
+
+	partition D_GCP_LABEL__DIRECT_QUERY = entity
+		mode: directQuery
+		source
+			entityName: D_GCP_LABEL__DIRECT_QUERY
+			expressionSource: 'DirectQuery til AS – GCP Usage & Billing data model'
+
+	annotation PBI_ResultType = Exception
+

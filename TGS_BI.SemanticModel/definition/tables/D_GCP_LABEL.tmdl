@@ -1,0 +1,164 @@
+table D_GCP_LABEL
+	lineageTag: d3238748-4425-496a-ae39-3449e3bf2f41
+	sourceLineageTag: 8ecd4ac9-29f9-46ef-acc0-2259c23b3750
+
+	column labels_key
+		dataType: string
+		lineageTag: 9edefd12-6180-4819-b7e5-b3a9f6c26347
+		sourceLineageTag: 614006dc-cac2-4a2a-bc40-14915083fc8c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: labels_key
+
+		annotation SummarizationSetBy = User
+
+	column labels_value
+		dataType: string
+		lineageTag: 2488e20c-acbc-44e1-abf3-878ee5829d0c
+		sourceLineageTag: 643b4b47-fb8e-4e83-a856-8c158ca6b14e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: labels_value
+
+		annotation SummarizationSetBy = User
+
+	column idd_gcp_label
+		dataType: string
+		isHidden
+		lineageTag: 0d8f8670-d078-4df8-ad4a-f4dc0a0db54c
+		sourceLineageTag: 39a36990-579d-42c3-b754-ed64e8b8af21
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_label
+
+		annotation SummarizationSetBy = User
+
+	column 'Label Key Group' = ```
+			
+			VAR CurrentLabelKeyLower = LOWER ( 'D_GCP_LABEL'[labels_key] ) // Convert to lowercase for case-insensitive matching
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        // -- Explicitly requested keys to be kept separate --
+			        CurrentLabelKeyLower = "environment", "Environment",
+			        CurrentLabelKeyLower = "env", "Environment", 
+			        CurrentLabelKeyLower = "environment-owner", "Environment Owner",
+			        CurrentLabelKeyLower = "dm-service", "DM Service",
+			        CurrentLabelKeyLower = "dm-service-component", "DM Service Component",
+			        CurrentLabelKeyLower = "upd-projectid", "UPD Project ID",
+			        CurrentLabelKeyLower = "upd-productid", "UPD Product ID",
+			        CurrentLabelKeyLower = "tgsone-orderid", "TGS One Order ID",
+			        CurrentLabelKeyLower = "owner", "Owner",
+			        CurrentLabelKeyLower = "shared-services", "Shared Services",
+			        CurrentLabelKeyLower = "customer", "Customer",
+			        CurrentLabelKeyLower = "purpose", "Purpose",
+			        CurrentLabelKeyLower = "resource_name", "Resource Name",
+			        CurrentLabelKeyLower = "project-code", "Project Code", // Catches project-code
+			        CurrentLabelKeyLower = "project_code", "Project Code", // Catches project_code (underscore)
+			        CurrentLabelKeyLower = "project", "Project",
+			
+			        // -- Grouping for Kubernetes related labels --
+			        // Order is important: more specific (path-like) prefixes first
+			        (LEFT(CurrentLabelKeyLower, LEN("k8s-label/")) = "k8s-label/"), "Kubernetes Pod/Resource Label", 
+			        (LEFT(CurrentLabelKeyLower, LEN("k8s-namespace-labels/")) = "k8s-namespace-labels/"), "Kubernetes Namespace Label",
+			        (LEFT(CurrentLabelKeyLower, LEN("k8s-namespace/")) = "k8s-namespace/"), "Kubernetes Namespace Attribute (Path-like)",
+			        (LEFT(CurrentLabelKeyLower, LEN("k8s-")) = "k8s-"), "Kubernetes General Key", 
+			
+			        // -- Grouping for Google system generated labels --
+			        (LEFT(CurrentLabelKeyLower, LEN("goog-")) = "goog-"), "Google System Label",
+			
+			        // -- Special case for empty label key --
+			        CurrentLabelKeyLower = "", "No Label Key",
+			
+			        // -- Fallback for other labels --
+			        "Other Application/User Defined Labels"
+			    )
+			```
+		lineageTag: 23f0730f-9470-46ff-9d5b-3d15070f100f
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Label Value Group' = ```
+			
+			VAR CurrentLabelKeyGroup = 'D_GCP_LABEL'[Label Key Group] // Replace 'labels_value_table' with your actual table name
+			VAR CurrentLabelValue = 'D_GCP_LABEL'[labels_value]     // Replace 'labels_value_table' with your actual table name
+			VAR CurrentLabelValueLower = LOWER ( CurrentLabelValue )
+			VAR ValueLength = LEN ( CurrentLabelValue )
+			
+			// Helper variable for numeric check
+			VAR PotentialNumber = IFERROR(VALUE(CurrentLabelValue), BLANK()) // Returns BLANK() if conversion fails
+			
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        // -- 1. Handle Label Key Groups where the value should be preserved as is --
+			        CurrentLabelKeyGroup IN {
+			            "Environment", "Environment Owner", "DM Service", "DM Service Component",
+			            "UPD Project ID", "UPD Product ID", "TGS One Order ID", "Owner",
+			            "Shared Services", "Customer", "Purpose", "Resource Name",
+			            "Project Code", "Project"
+			        }, CurrentLabelValue,
+			
+			        ISBLANK ( CurrentLabelValue ) || CurrentLabelValue = "", "No Value",
+			
+			        CurrentLabelKeyGroup = "Google System Label",
+			            SWITCH (
+			                TRUE (),
+			                (ValueLength = 36 && CONTAINSSTRING ( CurrentLabelValue, "-" ) &&
+			                 NOT CONTAINSSTRING ( CurrentLabelValue, "_" ) &&
+			                 NOT CONTAINSSTRING ( CurrentLabelValue, "." )
+			                ), "Google System Label - UUID",
+			                (LEFT ( CurrentLabelValue, 4 ) = "202" && CONTAINSSTRING ( CurrentLabelValueLower, "_rc" )), "Google System Label - Release Candidate/Date ID",
+			                CONTAINSSTRING ( CurrentLabelValueLower, ".googleapis.com" ), "Google System Label - API/Service Endpoint",
+			                (ValueLength >= 10 && MID(CurrentLabelValue,5,1) = "-" && MID(CurrentLabelValue,8,1) = "-"), "Google System Label - Date-like ID",
+			                "Google System Label - Specific Identifier" 
+			            ),
+			
+			        CurrentLabelKeyGroup IN { 
+			            "Kubernetes Pod/Resource Label", "Kubernetes Namespace Label", 
+			            "Kubernetes Namespace Attribute (Path-like)", "Kubernetes General Key" 
+			        },
+			            SWITCH (
+			                TRUE (),
+			                LEFT ( CurrentLabelValue, 14 ) = "Grouped value,", "Kubernetes - Grouped Value",
+			                CurrentLabelValueLower IN {"true", "false"}, "Kubernetes - Boolean Value",
+			                CurrentLabelValueLower IN {"kube-system", "default", "enabled", "disabled"}, "Kubernetes - Common Keyword/Namespace",
+			                CONTAINSSTRING(CurrentLabelValueLower, "controller"), "Kubernetes - Controller/Component Name",
+			                CONTAINSSTRING(CurrentLabelValueLower, "agent"), "Kubernetes - Agent/Component Name",
+			                CONTAINSSTRING(CurrentLabelValueLower, "server"), "Kubernetes - Server/Component Name",
+			                CONTAINSSTRING(CurrentLabelValueLower, "operator"), "Kubernetes - Operator/Component Name",
+			                // More robust version check
+			                (LEFT ( CurrentLabelValueLower, 1 ) = "v" && NOT ISERROR(VALUE(SUBSTITUTE(MID(CurrentLabelValueLower, 2, 10),".","")))), "Kubernetes - Version Tag", // Attempt to clean up potential decimals for the check
+			                (NOT ISERROR(VALUE(LEFT(CurrentLabelValue,1))) && CONTAINSSTRING(CurrentLabelValue, ".")), "Kubernetes - Version Tag",
+			                (ValueLength > 5 && ValueLength < 15 && NOT CONTAINSSTRING(CurrentLabelValue, "-") && NOT CONTAINSSTRING(CurrentLabelValue, " ") && NOT CONTAINSSTRING(CurrentLabelValue, "_") && ISBLANK(PotentialNumber)), "Kubernetes - Short Alphanumeric ID/Hash",
+			                (ValueLength = 36 && CONTAINSSTRING ( CurrentLabelValue, "-" )), "Kubernetes - UUID/Long ID",
+			                "Kubernetes - Specific Value/Name" 
+			            ),
+			            
+			        // -- 5. Default/Fallback for all other cases --
+			        IF(ValueLength > 50, "Other - Long Value/Identifier", 
+			           IF(ISNUMBER(PotentialNumber), // Check the variable which is BLANK() on error
+			              "Other - Numeric Value", 
+			              CurrentLabelValue
+			           ) 
+			        ) 
+			    )
+			```
+		lineageTag: f337cbe5-6582-4d34-81d2-10c3b234bdc0
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition D_GCP_LABEL = entity
+		mode: directQuery
+		source
+			entityName: D_GCP_LABEL
+			expressionSource: 'DirectQuery til AS – GCP Usage & Billing data model'
+
+	annotation PBI_ResultType = Exception
+

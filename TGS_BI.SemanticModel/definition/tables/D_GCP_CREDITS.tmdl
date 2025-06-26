@@ -1,0 +1,64 @@
+table D_GCP_CREDITS
+	lineageTag: d42e4aaa-0ca0-4528-b4e2-f67130d77e37
+	sourceLineageTag: 59909e6a-ed16-4ca5-a4a1-c2569f943ae7
+
+	column credits_name
+		dataType: string
+		lineageTag: f3e33cc3-b424-4fa5-b8c4-69864c66b846
+		sourceLineageTag: 41396716-6b57-4ff8-b5b5-868c2c5ea45d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: credits_name
+
+		annotation SummarizationSetBy = User
+
+	column credits_full_name
+		dataType: string
+		lineageTag: 41a76c7a-b1e2-404e-93e6-83f0e904038a
+		sourceLineageTag: 58f442c5-65ea-4cb4-958a-465169a91b8e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: credits_full_name
+
+		annotation SummarizationSetBy = User
+
+	column credits_id
+		dataType: string
+		lineageTag: d10bed2e-bad0-46b7-82bb-9378165c873b
+		sourceLineageTag: 6789abde-39f2-4d31-8e3e-e256dc91f707
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: credits_id
+
+		annotation SummarizationSetBy = User
+
+	column credits_type
+		dataType: string
+		lineageTag: 1b4a4121-cb70-49f2-8499-690affd73dbe
+		sourceLineageTag: 974860a7-468a-400a-8920-060d9c5b279f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: credits_type
+
+		annotation SummarizationSetBy = User
+
+	column idd_gcp_credits
+		dataType: string
+		isHidden
+		isNullable: false
+		lineageTag: 69f0476b-5ce6-48e4-90cf-5690bc342d00
+		sourceLineageTag: 03ecb46c-7cbc-442c-8752-395052fbd71e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_credits
+
+		annotation SummarizationSetBy = User
+
+	partition D_GCP_CREDITS = entity
+		mode: directQuery
+		source
+			entityName: D_GCP_CREDITS
+			expressionSource: 'DirectQuery til AS – GCP Usage & Billing data model'
+
+	annotation PBI_ResultType = Exception
+

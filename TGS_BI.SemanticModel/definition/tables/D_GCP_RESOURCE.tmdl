@@ -1,0 +1,209 @@
+table D_GCP_RESOURCE
+	lineageTag: 3771de7a-6488-45e0-88f1-24b3ab31b1b2
+	sourceLineageTag: a7d0ad14-28d5-41bb-9980-d4082acdc8a5
+
+	column idd_gcp_resource
+		dataType: string
+		isHidden
+		isNullable: false
+		lineageTag: beb2ff4c-f0f0-4a2e-b0bc-2d7a5cdd8c57
+		sourceLineageTag: 0b05dd9f-8e72-414e-a7af-b8c4ea99a6a7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_resource
+
+		annotation SummarizationSetBy = User
+
+	column resource_short_name
+		dataType: string
+		lineageTag: fc01de8b-6fe3-4e24-9bb8-023d196a3542
+		sourceLineageTag: edfbe12a-4609-489c-99b0-dcf1e60b82db
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: resource_short_name
+
+		annotation SummarizationSetBy = User
+
+	column instance_short_name
+		dataType: string
+		lineageTag: 12b14881-8d57-47aa-93b9-401543eeb558
+		sourceLineageTag: 9bc4c65b-40a6-4803-83f2-5cb38bd867b9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: instance_short_name
+
+		annotation SummarizationSetBy = User
+
+	column instance_description
+		dataType: string
+		lineageTag: 447fe77a-1f1a-4b0f-af1c-57db44086564
+		sourceLineageTag: 6d8cb361-c4f9-4f4c-97f9-8cdf17321ded
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: instance_description
+
+		annotation SummarizationSetBy = User
+
+	column instance_machin_type
+		dataType: string
+		lineageTag: f979140d-a90d-4dba-a15b-764d2f1a0e9d
+		sourceLineageTag: e814d952-96ba-42f4-b139-2857b35c5565
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: instance_machin_type
+
+		annotation SummarizationSetBy = User
+
+	column resource_status
+		dataType: string
+		lineageTag: 2e984384-1dc7-4879-982d-01a1f9ffaf7f
+		sourceLineageTag: eec2ea8b-25bd-4026-b918-8e098ca5fd00
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: resource_status
+
+		annotation SummarizationSetBy = User
+
+	column disk_autodelete
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3e269e48-0cdf-441c-b58c-e62be1fdb910
+		sourceLineageTag: ba1fb2b2-005e-4d48-84ed-bb4ac7feacd2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: disk_autodelete
+
+		annotation SummarizationSetBy = User
+
+	column disk_type
+		dataType: string
+		lineageTag: ff89e475-ffcd-4e5d-94b3-8002f57ed359
+		sourceLineageTag: ad86b725-e984-439e-be96-05a689f536ff
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: disk_type
+
+		annotation SummarizationSetBy = User
+
+	column disk_boot
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f8ce6ad3-e4cf-43d7-9e50-5f92713964b6
+		sourceLineageTag: 80a17515-6759-4bbb-a46f-0daa5ef2deea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: disk_boot
+
+		annotation SummarizationSetBy = User
+
+	column disk_licenses
+		dataType: string
+		lineageTag: c2c88741-4c15-459e-81be-a6b1bdc46317
+		sourceLineageTag: 2306ff13-3488-49b7-ae04-bd6e05c6fb73
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: disk_licenses
+
+		annotation SummarizationSetBy = User
+
+	column disk_sizegb
+		dataType: int64
+		formatString: 0
+		lineageTag: 37e5cf34-922f-477c-a5e2-7ecdab4fa1e9
+		sourceLineageTag: fb7e35c5-2bf1-4720-8a87-135125c5cbda
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: disk_sizegb
+
+		annotation SummarizationSetBy = User
+
+	column disk_status
+		dataType: string
+		lineageTag: b94c331f-8189-4f1e-bfa5-b3e23240c920
+		sourceLineageTag: 36d51e54-fc6b-496c-b12a-16e6f39e6ced
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: disk_status
+
+		annotation SummarizationSetBy = User
+
+	column disk_type2
+		dataType: string
+		lineageTag: d142e7d3-41bd-430d-9dc1-a710c3cd9783
+		sourceLineageTag: eabf2534-ef57-4918-b3e8-fa92879f2668
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: disk_type2
+
+		annotation SummarizationSetBy = User
+
+	column sourceSnapshotId
+		dataType: string
+		lineageTag: da164e43-de2d-42e8-9109-79e359997d86
+		sourceLineageTag: dd2da3a1-ec51-400c-8cf8-93f6e8bf912f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: sourceSnapshotId
+
+		annotation SummarizationSetBy = User
+
+	column instance_status
+		dataType: string
+		lineageTag: 9bc6ea1d-57a8-4e97-88c9-73e09695a603
+		sourceLineageTag: 28fe666d-6726-4495-9191-5f2b371dc3ab
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: instance_status
+
+		annotation SummarizationSetBy = User
+
+	column resource_type
+		dataType: string
+		lineageTag: 0b81f904-d160-45bf-b86e-d84b920ed249
+		sourceLineageTag: aff3cf6e-b3e4-4e21-bfd5-3b991e3bd9c2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: resource_type
+
+		annotation SummarizationSetBy = User
+
+	column resource_last_start_stop_time
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: b87439f9-1b2d-491f-b47e-cd1f408b6e75
+		sourceLineageTag: f99c8bdf-d2c3-43ce-bd8b-2de51c96ff93
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: resource_last_start_stop_time
+
+		annotation SummarizationSetBy = User
+
+	column resource_last_start_stop_action
+		dataType: string
+		lineageTag: 25ed73d7-7e9b-4dd3-ad7a-ed9b6eaeb004
+		sourceLineageTag: 2e496c08-0b90-40b8-9a70-8791aa9c68a0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: resource_last_start_stop_action
+
+		annotation SummarizationSetBy = User
+
+	column D_DATE_last_connection
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 6f6cb9a0-adc0-44de-8f41-a3003a47a5ca
+		sourceLineageTag: 022f096b-383c-44f7-b138-81a87d2f4626
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: D_DATE_last_connection
+
+		annotation SummarizationSetBy = User
+
+	partition D_GCP_RESOURCE = entity
+		mode: directQuery
+		source
+			entityName: D_GCP_RESOURCE
+			expressionSource: 'DirectQuery til AS – GCP Usage & Billing data model'
+
+	annotation PBI_ResultType = Exception
+

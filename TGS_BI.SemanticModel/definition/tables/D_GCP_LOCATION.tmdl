@@ -1,0 +1,44 @@
+table D_GCP_LOCATION
+	lineageTag: 27dd834c-ee7f-46a8-b7c0-4d97a329c7fc
+	sourceLineageTag: ebe00b62-e665-4a2b-ba6f-90895b580544
+
+	column location_location
+		dataType: string
+		lineageTag: 646fcc9e-f7f8-491e-b6de-9b627fe9f26b
+		sourceLineageTag: 3b1cefb0-3207-43e4-9282-21591420b09d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_location
+
+		annotation SummarizationSetBy = User
+
+	column location_country
+		dataType: string
+		lineageTag: 4355fe3e-d04c-4ca6-8b88-886c86a95d7f
+		sourceLineageTag: 17f0a9bd-e99e-4883-908e-b0b3cf437489
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_country
+
+		annotation SummarizationSetBy = User
+
+	column idd_gcp_location
+		dataType: string
+		isHidden
+		isNullable: false
+		lineageTag: e10351c1-eed2-4b14-8311-626d5548f34d
+		sourceLineageTag: 329a3b9d-f513-4553-bd96-317f30f26582
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_location
+
+		annotation SummarizationSetBy = User
+
+	partition D_GCP_LOCATION = entity
+		mode: directQuery
+		source
+			entityName: D_GCP_LOCATION
+			expressionSource: 'DirectQuery til AS – GCP Usage & Billing data model'
+
+	annotation PBI_ResultType = Exception
+

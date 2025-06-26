@@ -1,0 +1,74 @@
+table D_GCP_COST_ALLOCATION
+	lineageTag: 8c134a4e-9b4b-42a2-b30d-83220146fc87
+	sourceLineageTag: da9bbc68-3e91-439f-a61a-aec6c893d77a
+
+	column charging_code
+		dataType: string
+		lineageTag: 27d94a6b-6fab-448b-9f48-a1dbb56210b2
+		sourceLineageTag: c02d4021-1c0f-4201-ba07-a87c9e5ba222
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: charging_code
+
+		annotation SummarizationSetBy = User
+
+	column department
+		dataType: string
+		lineageTag: 4d2a7392-25ab-4da7-adcf-176d31d61db3
+		sourceLineageTag: c2105b99-0164-4827-9148-1018ceb9e40a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: department
+
+		annotation SummarizationSetBy = User
+
+	column product
+		dataType: string
+		lineageTag: eab4b9b9-dfda-419b-8bba-8014335ec6f7
+		sourceLineageTag: b1339357-0ea1-4ffc-8bef-e3dcc610e2a8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product
+
+		annotation SummarizationSetBy = User
+
+	column management_group
+		dataType: string
+		lineageTag: db832b9e-e889-4f61-940d-51151d69a495
+		sourceLineageTag: 11749105-5833-44af-9fd4-c910e4c5826a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: management_group
+
+		annotation SummarizationSetBy = User
+
+	column legal_entity
+		dataType: string
+		lineageTag: 7e76f895-77ac-4e1e-b500-51c0026b44f4
+		sourceLineageTag: f88f8c9e-8dcc-4dbd-994f-0c3c5cb05325
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: legal_entity
+
+		annotation SummarizationSetBy = User
+
+	column idd_gcp_cost_allocation
+		dataType: string
+		isHidden
+		isNullable: false
+		lineageTag: 5e3880e2-7202-48f3-90ed-8598671d4282
+		sourceLineageTag: a3a81aef-7639-4b58-aa3e-a84287480d08
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: idd_gcp_cost_allocation
+
+		annotation SummarizationSetBy = User
+
+	partition D_GCP_COST_ALLOCATION = entity
+		mode: directQuery
+		source
+			entityName: D_GCP_COST_ALLOCATION
+			expressionSource: 'DirectQuery til AS – GCP Usage & Billing data model'
+
+	annotation PBI_ResultType = Exception
+
