@@ -33,7 +33,7 @@ table D_GCP_LABEL
 
 		annotation SummarizationSetBy = User
 
-	column 'Label Key Group' = ```
+	column Label_Key_Group = ```
 			
 			VAR CurrentLabelKeyLower = LOWER ( 'D_GCP_LABEL'[labels_key] ) // Convert to lowercase for case-insensitive matching
 			RETURN
@@ -81,9 +81,9 @@ table D_GCP_LABEL
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Label Value Group' = ```
+	column Label_Value_Group = ```
 			
-			VAR CurrentLabelKeyGroup = 'D_GCP_LABEL'[Label Key Group] // Replace 'labels_value_table' with your actual table name
+			VAR CurrentLabelKeyGroup = 'D_GCP_LABEL'[Label_Key_Group] // Replace 'labels_value_table' with your actual table name
 			VAR CurrentLabelValue = 'D_GCP_LABEL'[labels_value]     // Replace 'labels_value_table' with your actual table name
 			VAR CurrentLabelValueLower = LOWER ( CurrentLabelValue )
 			VAR ValueLength = LEN ( CurrentLabelValue )
