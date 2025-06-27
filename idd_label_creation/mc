@@ -1,0 +1,25 @@
+erDiagram
+    F_GCP_COST {
+        string idd_gcp_label
+        double cost
+    }
+
+    D_GCP_LABEL {
+        string idd_gcp_label
+        string labels_key
+        string labels_value
+    }
+
+    Pivoted_Label_View {
+        string idd_gcp_label
+        string dm_service
+        string dm_service_component
+        string environment
+        string environment_owner
+        string owner
+        string shared_services
+    }
+
+    F_GCP_COST ||--o{ D_GCP_LABEL : has_labels
+    D_GCP_LABEL ||--o{ Pivoted_Label_View : transforms_to
+    F_GCP_COST ||--|| Pivoted_Label_View : joins_on_idd_gcp_label
