@@ -1,4 +1,4 @@
-## 🔍 GCP Usage & Billing Model – Overview
+## GCP Usage & Billing Model – Overview
 
 This Power BI model is built using a star schema with `F_GCP_COST` as the central fact table, connected to multiple dimension tables such as `D_GCP_PROJECT`, `D_GCP_COST_ALLOCATION`, `D_GCP_CREDITS`, `D_GCP_LOCATION`, and others. It supports both standard and DirectQuery variants to enable real-time insights and flexibility in dashboard design.
 
