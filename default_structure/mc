@@ -1,0 +1,106 @@
+erDiagram
+    F_GCP_COST {
+        double cost
+        double credits
+        double cost_minus_credits
+        double usage_amount
+        double usage_amount_in_pricing_units
+        string idd_gcp_project
+        string idd_gcp_cost_allocation
+        string idd_gcp_credits
+        string idd_gcp_sku
+        string idd_gcp_location
+        dateTime D_DATE_INVOICE
+        dateTime D_DATE_RUN
+        string idd_gcp_resource
+        string idd_gcp_label
+        string idd_gcp_pgs_custom_label
+    }
+
+    D_GCP_PROJECT {
+        string idd_gcp_project
+        string project_id
+        string project_number
+        string project_name
+        string project_env
+        string billing_account_id
+    }
+
+    D_GCP_COST_ALLOCATION {
+        string idd_gcp_cost_allocation
+        string charging_code
+        string department
+        string product
+        string management_group
+        string legal_entity
+    }
+
+    D_GCP_CREDITS {
+        string idd_gcp_credits
+        string credits_id
+        string credits_name
+        string credits_full_name
+        string credits_type
+    }
+
+    D_GCP_SKU {
+        string idd_gcp_sku
+        string sku_id
+        string sku_description
+        string service_description
+        string pricing_unit_description
+    }
+
+    D_GCP_LOCATION {
+        string idd_gcp_location
+        string location_location
+        string location_country
+    }
+
+    D_WH_DATE_RUN {
+        dateTime D_DATE
+        int64 CNT_DAYS_FROM_YEAR_BEG
+        int64 MONTH_NUM
+        int64 YEAR
+    }
+
+    D_WH_MONTH_INVOICE {
+        dateTime d_month
+        dateTime d_month_end
+        int64 month_num
+        int64 YEAR
+        string month_code
+    }
+
+    D_GCP_RESOURCE {
+        string idd_gcp_resource
+        string resource_short_name
+        string instance_short_name
+        string instance_status
+    }
+
+    D_GCP_LABEL {
+        string idd_gcp_label
+        string labels_key
+        string labels_value
+    }
+
+    D_GCP_PGS_CUSTOM_LABEL {
+        string idd_gcp_pgs_custom_label
+        string application_name
+        string spark_imaging_project
+        string spark_application_name
+        string type
+    }
+
+    %% Relasjoner
+    F_GCP_COST ||--o{ D_GCP_PROJECT : "contains"
+    F_GCP_COST ||--o{ D_GCP_COST_ALLOCATION : "allocates"
+    F_GCP_COST ||--o{ D_GCP_CREDITS : "applies"
+    F_GCP_COST ||--o{ D_GCP_SKU : "uses"
+    F_GCP_COST ||--o{ D_GCP_LOCATION : "located_in"
+    F_GCP_COST ||--o{ D_WH_DATE_RUN : "run_on"
+    F_GCP_COST ||--o{ D_WH_MONTH_INVOICE : "billed_in"
+    F_GCP_COST ||--o{ D_GCP_RESOURCE : "resources"
+    F_GCP_COST ||--o{ D_GCP_LABEL : "has_label"
+    F_GCP_COST ||--o{ D_GCP_PGS_CUSTOM_LABEL : "custom_tag"
