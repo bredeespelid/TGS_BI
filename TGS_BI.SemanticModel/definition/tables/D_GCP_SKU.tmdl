@@ -14,13 +14,14 @@ table D_GCP_SKU
 
 	column idd_gcp_sku
 		dataType: string
-		isHidden
 		isNullable: false
 		lineageTag: 621f8226-5c24-4353-a3e8-d664cb1651c5
 		sourceLineageTag: ddc0248b-387f-4084-9cf6-8186dd6008fa
 		dataCategory: Uncategorized
 		summarizeBy: none
 		sourceColumn: idd_gcp_sku
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = User
 

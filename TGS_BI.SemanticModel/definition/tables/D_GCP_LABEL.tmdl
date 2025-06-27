@@ -24,12 +24,13 @@ table D_GCP_LABEL
 
 	column idd_gcp_label
 		dataType: string
-		isHidden
 		lineageTag: 0d8f8670-d078-4df8-ad4a-f4dc0a0db54c
 		sourceLineageTag: 39a36990-579d-42c3-b754-ed64e8b8af21
 		dataCategory: Uncategorized
 		summarizeBy: none
 		sourceColumn: idd_gcp_label
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = User
 
